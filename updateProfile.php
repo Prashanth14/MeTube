@@ -31,7 +31,7 @@
 
     <body>     
         <div class="container">
-            <div class="title">Edit profile</div>
+            <div class="title">Update/Edit your profile</div>
             <div class="content">
         
                 <form action="updateProfile.php" method="POST">

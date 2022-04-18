@@ -1,6 +1,6 @@
 <?php
     require_once("files/main.php") ;
-    $mediaTitle = "Favorite List";
+    $mediaTitle = "Favorites ";
     $page = 'Favorite';
     require_once("files/MediaOrder.php")
 ?>

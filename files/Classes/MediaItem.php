@@ -13,7 +13,7 @@ class MediaItem{
         $url= "watch.php?Id=" . $this->media->getId();
         
         return "<a href='$url'>
-                    <div class='videoGridItem'>
+                    <div class='videoGridItem' style=' margin-right: 130px; margin-bottom: 40px;'>
                    $thumbnail 
                     $details
                     </div>
@@ -27,7 +27,7 @@ class MediaItem{
         $keywords = $this->media->getKeywords();
         $uploaddate = $this->media->getUploadDate();
         $size = $this->media->getMediasize();
-        return "<div class='details'>
+        return "<div class='details' style='width: 60px;' >
                     <h3 class='title'>$title</h3>
                     <span class='username'>$userName</span>
                     <span class='description'>$keywords</span>

@@ -13,54 +13,46 @@ class FriendsClass{
                 return "";
             }
             else{
-                $html = "
-                <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover'>
-                    <thead class='thead-dark'>
-                    <tr>
-                    <th>Username</th>
-                    <th>Relationship</th>
-                    <th>Block</th>
-
-                    </tr></thead>
-                    <tbody><tr><td>";
-
-                $html.= "<div style='padding-bottom:10px;'>
-                
+                $html="<div class='row' style='background-color:white;padding:20px;'>";
+                $html.= " <div class='column' style='background-color:white;'>
+                <div>
                 <form action='friend.php' method='POST'>
+                <br><label for='username' style='font-weight: bold'>User Name</label>
                 <select name='person'>";
                 while($row= $query->fetch(PDO::FETCH_ASSOC)){
                     $html.= "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
-
-                $html.= "</select></td>
-                <td><select name='relation'>
-                    <option value='Friend'>Friend</option>
-                    <option value='Family'>Family</option>
-                    <option value='Fav'>Favourite</option>
-                </select>
-                <button type='submit' class='btn btn-primary' name='friendsButton' value='$userName'>Confirm</button>
-                </div></td>
-                <td><select name='block'>
-                    <option value='Blocked'>Block</option>
-                    <option value='Not Blocked'>Unblock</option>
-                </select>
-                <button type='submit' class='btn btn-primary' name='blockButton' value='$userName'>Confirm</button>
-                </div></td>
-
-
-                </tr></form>
-                </tbody></table></div>
+                $html.= "</select>
+                <p style='font-weight: bold'>Please select your Reationship:</p>
+                <input type='radio' id='realtion1' name='relation' value='Friend'>
+                <label for='realtion1'>Friend</label><br>
+                <input type='radio' id='realtion2' name='relation' value='Family'>
+                <label for='realtion2'>Family</label><br>  
+                <input type='radio' id='realtion3' name='relation' value='Fav'>
+                <label for='realtion3'>Favourite</label><br>
+                <button type='submit' name='friendsButton' value='$userName'>Add</button              
+                <br><p style='font-weight: bold'>Please select below action for block/unblock contact:</p>
+                <input type='radio' id='block' name='block' value='Blocked'>
+                <label for='block'>Block</label><br>
+                <input type='radio' id='unblock' name='block' value='Not Blocked'>
+                <label for='unblock'>Unblock</label><br>  
+                <button type='submit' name='blockButton' value='$userName'>Add</button>
+                <br></form>
                 </div>
-                <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover'>
-                    <thead class='thead-dark'>
+                </div>
+               
+                <div class='column' style='background-color:white;padding:30px'>
+           
+                <div>
+                <table class='table table-bordered'>
+                    <thead class='thead-light'>
                     <tr>
                     <th>Username</th>
                     <th>Current Relationship</th>
                     <th>Block Status</th>
                     </tr>
                     </thead>
-                    <tbody>";
-
+                <tbody>";
                 $contactquery = $this->con->prepare("select * from contact where userName = '$userName'");
                 $contactquery->execute();
 
@@ -74,7 +66,8 @@ class FriendsClass{
                         <td>$contactType</td>
                         <td>$status</td></tr>";
                 }
-                $html.= "</tbody></table></div></div>";
+                $html.= "</tbody></table></div></div></div>";
+
                 return $html;
             }
         }

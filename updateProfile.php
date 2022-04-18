@@ -38,7 +38,7 @@
                 <form action="updateProfile.php" method="POST">
                     <div class="user-details">
                         <div class="input-box">
-                            <input type="text" name="email" placeholder="Enter your new email">
+                            <input type="text" name="email" placeholder="New email address">
                             <?php  echo $userAccount->displayError(StatusMessage::$emailInvalidError); ?>
                             <?php echo $userAccount->displayError(StatusMessage::$emailUniqueError); ?>
                         </div>
@@ -49,10 +49,10 @@
                     
                     <div class="user-details">
                         <div class="input-box">
-                            <input type="password" name ="currentpassword" placeholder="Enter old password">
+                            <input type="password" name ="currentpassword" placeholder="Old password">
                         </div>
                         <div class="input-box">
-                            <input type="password" name ="newpassword" placeholder="Enter new password">
+                            <input type="password" name ="newpassword" placeholder="New password">
                         </div>
 
                         <div class="input-box">

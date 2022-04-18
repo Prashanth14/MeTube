@@ -69,7 +69,7 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
       </li>
    
       <li class='nav-item'>
-      <a class='nav-link' href='logout.php'>Log Out </a>
+      <a class='nav-link' href='logout.php'>Sign Out </a>
       </li>
       </ul>";
         } else {

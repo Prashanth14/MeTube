@@ -4,9 +4,8 @@ require_once("files/main.php");
 require_once("files/Classes/messagingClass.php");
 
 ?>
-<div class='container' style='padding-top:10px;'>
-<div class='jumbotron'>
-    <h3 class="text-dark display-3 text-center">Contacts</h3>
+
+<p class="text-dark display-4 text-start" style='background-color:white'>Messages</p>
 
     <?php
     

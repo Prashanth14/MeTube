@@ -11,6 +11,7 @@ while($row = $result->fetch()){
 echo json_encode($data);
 $con = null;
 exit();
+?>
 
 
 

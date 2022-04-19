@@ -5,7 +5,7 @@ require_once("files/main.php");
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" href="./images/favicon.png" type="image/png" sizes="16x16">
+<link rel="icon" href="/Applications/XAMPP/xamppfiles/htdocs/MeTube_PPJ/files/Images/avatar.png" type="image/png" sizes="16x16">
 <title>forum</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

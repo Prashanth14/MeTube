@@ -39,9 +39,9 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
 </head>
 <body style="background-color:orange;">
   <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top" background-color: color | transparent;  >
-    <button class="btn hamburgermenu" style="background-color:'red'">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-    </button> 
+    <!-- <button class="btn hamburgermenu" style="background-color:'red'">
+        <span class="navbar-toggler-icon"></span>
+    </button>  -->
     <a class="navbar-brand" href="index.php?page=Home"><img src="./files/css/meTubeLogo1.jpeg" alt="MeTubeLogo" style="width:150px;height:39px;"> </a>
    
     <!-- <button class="navbar-toggler btn " type="button" data-toggle="collapse" data-target="#navbar-collapse-content"

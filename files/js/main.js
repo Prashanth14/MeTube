@@ -13,13 +13,15 @@ success: function(data) {
     for (var i=0; i<data.length; i++) {
         var commentId = data[i].id;
         if(data[i].parent_comment == 0){
-        var row = $('<tr><td><b><img src="avatar.jpg" width="30px" height="30px" />' + data[i].student + ' :<i> '+ data[i].date + ':</i></b></br><p style="padding-left:80px">' + data[i].post + '</br><a data-toggle="modal" data-id="'+ commentId +'" title="Add this item" class="open-ReplyModal" href="#ReplyModal">Reply</a>'+'</p></td></tr>');
+
+        var row = $('<tr><td><b><img src="files/Images/avatar.png" width="30px" height="30px" />' + data[i].student + ' :<i> '+ data[i].date + ':</i></b></br><p style="padding-left:80px">' + data[i].post + '</br><a data-toggle="modal" data-id="'+ commentId +'" title="Add this item" class="open-ReplyModal" href="#ReplyModal">Reply</a>'+'</p></td></tr>');
         $('#record').append(row);
         for (var r = 0; (r < data.length); r++)
                 {
                     if ( data[r].parent_comment == commentId)
                     {
-                        var comments = $('<tr><td style="padding-left:80px"><b><img src="avatar.jpg" width="30px" height="30px" />' + data[r].student + ' :<i> ' + data[r].date + ':</i></b></br><p style="padding-left:40px">'+ data[r].post +'</p></td></tr>');
+
+                        var comments = $('<tr><td style="padding-left:80px"><b><img src="files/Images/avatar.png" width="30px" height="30px" />' + data[r].student + ' :<i> ' + data[r].date + ':</i></b></br><p style="padding-left:40px">'+ data[r].post +'</p></td></tr>');
                         $('#record').append(comments);
                     }
                 }
@@ -60,6 +62,8 @@ $(document).ready(function() {
 				cache: false,
 				success: function(dataResult){
 					var dataResult = JSON.stringify(dataResult);
+
+					alert(dataResult);
 					if(dataResult.statusCode==200){
 						$("#butsave").removeAttr("disabled");
 						document.forms["frm"]["Pcommentid"].value = "";

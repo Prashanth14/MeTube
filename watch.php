@@ -29,7 +29,7 @@
 
 ?>
 
-<div class="PageDiv"> 
+<div class="PageDiv" > 
     <div class="watchLeftColumn embed-responsive">
     <?php
         $mediaPlayer= new MediaPlayer($media);
@@ -38,7 +38,7 @@
     </div>
     <div class= "suggestions">
         <div>
-            Recommended media for you:
+            Recommendations for you:
         </div>
         <?php
             $mediaGrid= new MediaGrid($con);
@@ -46,17 +46,19 @@
         ?>
 
     </div>
+    
 </div>
-
 <div>
 
 <?php
+    
+    echo "<form action='download.php' method='POST' >
+    <button type='submit' value='$mediaId' name='downloadButton' style='background-color: #f44336; position: absolute;
+    margin-left:410px;
+    '>download<img src='./files/css/downloadIcon.png' alt='downloadIcon' style='width:20px;height:20px;'></button>
+    </form>";
     $mediaPlayer= new MediaInfoSection($con,$media,$loggedInUser);
     echo $mediaPlayer->create();
-
-    echo "<form action='download.php' method='POST' >
-    <button type='submit' value='$mediaId' name='downloadButton'>Download</button>
-    </form>";
 
     $checkquery = $con->prepare("SELECT * from rating where mediaId = '$mediaId'");
     $checkquery -> execute();
@@ -160,7 +162,7 @@
 
 if($loggedInUserName!=""){
     echo "<div class='commentSection' style='margin-right:425px;'>
-               <form action='watch.php' method='POST' style='padding-top:20px' >
+               <form action='watch.php' method='POST' style='padding-top:40px' >
                 <div class='input-group'>
                     <input type='text' id='comment' name='comment' required placeholder='your comment' class='form-control' >
                     <div class='input-group-append'>

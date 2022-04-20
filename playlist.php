@@ -10,23 +10,28 @@ if($query->rowCount()== 0){
 }
 else{
     $html .= "
-    <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover'>
+    <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover' style='background-color:rgb(255, 165, 0)'>
             <thead class='thead-dark'>
             <tr>
-            <th>Playlist Name</th>
+            <th style='background-color:MediumSeaGreen'>Playlist Name</th>
             </tr>
         
             </thead>
-            <tbody><tr><td>
-            <form action='playlist.php' method='POST'>";
+            <tbody><tr>
+            <td>
+                <form action='playlist.php' method='POST'>";
         
-    $html.= "<select name='playlistname'>";
-    while($row= $query->fetch(PDO::FETCH_ASSOC)){
-        $html.= "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-    }
-    $html.="</select></td>
-    <td><button type='submit' class='btn btn-primary' name='viewplaylistButton' value='name'>View Playlist</button></td>
-    <td><button type='submit' class='btn btn-primary' name='deleteplaylistButton' value='name'>Delete Playlist</button></td>
+                $html.= "<select name='playlistname'>";
+                while($row= $query->fetch(PDO::FETCH_ASSOC)){
+                    $html.= "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                    }
+            $html.="</select></td>
+       <tr><td>
+            <button type='submit' class='btn btn-primary' name='viewplaylistButton' value='name'>View Playlist</button>
+       </td></tr>
+     <tr><td>
+        <button type='submit' class='btn btn-danger' name='deleteplaylistButton' value='name'>Delete Playlist</button>
+    </td></tr>
     </form>
     </div></tr></tbody>
     </table></div></div>";
@@ -34,10 +39,10 @@ else{
 
 }
 $html.="
-    <div>
-    <p1>Create A New Playlist</p1>
+    <div style='border: 5px solid green; padding:10px; background-color:Tomato'>
+    <p1>Create a new Playlist</p1>
     <form action='playlist.php' method='POST'>
-	        <input type='text' name ='playlistNamein' placeholder='Enter Name' required>
+	        <input type='text' name ='playlistNamein' placeholder='Enter Playlist name...' required><br><br>
             <button type='submit' class='btn btn-primary' name='createPlaylist' value='$loggedInUserName'>Create Playlist</button>
         </form>
     

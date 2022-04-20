@@ -30,7 +30,8 @@
     </head>
 
     <body>     
-        <div class="container">
+        
+        <div class="container" >
             <div class="title">Update your profile</div>
             <div class="content">
         

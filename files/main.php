@@ -37,18 +37,20 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
     <script src="files/js/jsfile.js"></script>
 
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<body style="background-color:orange;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top" background-color: color | transparent;  >
     <button class="btn hamburgermenu" style="background-color:'red'">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+    </button> 
     <a class="navbar-brand" href="index.php?page=Home"><img src="./files/css/meTubeLogo1.jpeg" alt="MeTubeLogo" style="width:150px;height:39px;"> </a>
-    <button class="navbar-toggler btn " type="button" data-toggle="collapse" data-target="#navbar-collapse-content"
+   
+    <!-- <button class="navbar-toggler btn " type="button" data-toggle="collapse" data-target="#navbar-collapse-content"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         Menu <i class="fas fa-caret-square-down"></i>
-    </button>
+    </button> -->
+    
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-content">
+    <div class="collapse navbar-collapse" id="navbar-collapse-content" >
 
         <form class="form-inline my-2 my-lg-0 mr-auto search-bar" action="search.php" method="GET">
             <input class="form-control mr-sm-2 search" list="datalist" onkeyup="ac(this.value)" type="search"
@@ -73,10 +75,10 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
         } else {
             echo "<ul class='navbar-nav'>
         <li class='nav-item'>
-          <a class='nav-link' href='signup.php'>Sign up <i class='fas fa-user-plus'></i> </a>
+          <a class='nav-link' href='signup.php'>Sign up </i> </a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='login.php'>Log In <i class='fas fa-user'></i></a>
+          <a class='nav-link' href='login.php'>Log In </i></a>
         </li>
       </ul>";
         }
@@ -85,42 +87,47 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
 </nav>
 
 
-<div id="side-nav" style="display:none;">
+<div id="side-nav" style="background-color:lightgrey; width: 250px;">
     <div class="sidebar-menu">
         <ul style="list-style-type:none;">
             <li class='nav-item'>
-                <a href='index.php?page=Home'>Home</a>
+                <a href='index.php?page=Home' style="color: black; font-size: 20px;"><img src="files/css/home.jpeg" style="width: 23px;"> Home</a>
             </li>
+            <br>
             <li class='nav-item'>
-                <a href='wordCloud.php'>Word Cloud</a>
+                <a href='wordCloud.php' style="color: black; font-size: 20px;"><img src="files/css/WordClouds.jpeg" style="width: 23px;"> Word Cloud</a>
             </li>
+            <br>
             <?php
             if ($loggedInUserName != "") {
                 echo "<li class='nav-item'>
-                        <a href='channels.php'>My Channel</a>
+                        <a href='channels.php' style='color: black; font-size: 20px;'><img src='files/css/myChannel.png' style='width: 25px;'> My Channel</a>
                       </li>
+                      <br>
                 
                      <li class='nav-item'>
-                      <a href='updateProfile.php'>Edit Profile</a>
+                      <a href='updateProfile.php' style='color: black; font-size: 20px;'><img src='files/css/editProfile.jpeg' style='width: 25px;'> Edit Profile</a>
                         </li>
+                        <br>
                     
                         <li class='nav-item'>
-                        <a href='friend.php'>Contacts</a>
+                        <a href='friend.php' style='color: black; font-size: 20px;'><img src='files/css/Contacts.jpeg' style='width: 25px;'> Contacts</a>
                       </li> 
+                      <br>
                       <li class='nav-item'>
-                        <a href='message.php'>Messages</a>
+                        <a href='message.php' style='color: black; font-size: 20px;'><img src='files/css/messages.png' style='width: 29px;'> Messages</a>
                       </li> 
-                    
+                      <br>
                     <li class='nav-item'>
-                      <a href='playlist.php?id='>Playlists</a>
+                      <a href='playlist.php?id=' style='color: black; font-size: 20px;'><img src='files/css/playlists.png' style='width: 25px;'> Playlists</a>
                     </li>
-                
+                    <br>
                     <li class='nav-item'>
-                      <a href='favorites.php'>Favorites</a>
+                      <a href='favorites.php' style='color: black; font-size: 20px;'><img src='files/css/favorites.png' style='width: 25px;'> Favorites</a>
                     </li>
-                    
+                    <br>
                     <li class='nav-item'>
-                      <a href='discussionBoard.php'>Discussion Forum</a>
+                      <a href='discussionBoard.php' style='color: black; font-size: 20px;'><img src='files/css/discussionForum.jpeg' style='width: 25px;'> Discussion Forum</a>
                     </li>";
             }
             ?>
@@ -130,5 +137,5 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
 </div>
 
 
-<div id="main-section">
+<div id="main-section" style="margin-left:19%">
     <div id="content" class="container-fluid">

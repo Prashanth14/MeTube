@@ -24,7 +24,7 @@
     }
 ?>
 
-<div class='videoSection'>
+<div class='videoSection' >
 
     <?php
         $mediaGrid= new MediaGrid($con);

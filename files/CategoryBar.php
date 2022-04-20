@@ -11,18 +11,26 @@ if(isset($_GET["category"])){
 }
 ?>
 
-<div>
-    <div style="display:flex; font-size: 19px; justify-content: flex-start">
-        <span style="display:flex"><?php echo $category?> Category: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div>
-            <a class="btn btn btn-dark" href='index.php?page=Home'>All</a>
-            <a class="btn btn btn-dark" href='index.php?page=Home&category=Animal'>Animals</a>
-            <a class="btn btn btn-dark" href='index.php?page=Home&category=Sports'>Sports</a>
-            <a class="btn btn btn-dark" href='index.php?page=Home&category=Human'>Human</a>
-            <a class="btn btn btn-dark" href='index.php?page=Home&category=Other'>Others</a>
+    <div style = 'margin-left: 8px; '>
+        <div style="display:flex; font-size: 19px; justify-content: flex-start;">
+            <span style="display:flex"><?php echo $category?> Category:&nbsp;&nbsp;&nbsp;</span>
+            <div>
+                        <a class="btn btn btn-link" href='index.php?page=Home'><b>All</b></a>
+                    
+                        <a class="btn btn btn-link" href='index.php?page=Home&category=Animal'><b>Animals</b></a>
+                    
+                        <a class="btn btn btn-link" href='index.php?page=Home&category=Sports'><b>Sports</b></a>
+                    
+                        <a class="btn btn btn-link" href='index.php?page=Home&category=Human'><b>Human</b></a>
+                    
+                        <a class="btn btn btn-link" href='index.php?page=Home&category=Other'><b>Others</b></a>
+                   
+            </div>
         </div>
     </div>
-</div>
+    
+
+
 
 <?php
 require("MediaOrder.php");

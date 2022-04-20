@@ -10,26 +10,31 @@ require_once("Classes/MediaItem.php");
         <p  style="text-align: center; font-size: 20px;"><?php echo $mediaTitle ?> </p>
     </div>
 
-    <div style="display:flex; align-items: center; justify-content: flex-end">
+    <div style="display:flex; align-items: center; ">
         <div style="font-size: 18px"> Order by: &nbsp;&nbsp;</div>
         <ul aria-label="Sorted By:" class="nav nav-tabs justify-content-end" id="pills-tab-order" role="tablist">
+            
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-Title-tab" data-bs-toggle="tab" data-bs-target="#pills-Title" type="button" role="tab" aria-controls="pills-Title" aria-selected="true">Title</button>
             </li>
+
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-Views-tab" data-bs-toggle="tab" data-bs-target="#pills-Views" type="button" role="tab" aria-controls="pills-Views" aria-selected="false">Most Viewed</button>
             </li>
+
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-Upload-tab" data-bs-toggle="tab" data-bs-target="#pills-Upload" type="button" role="tab" aria-controls="pills-Upload" aria-selected="false">Recent Videos</button>
             </li>
+
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-Size-tab" data-bs-toggle="tab" data-bs-target="#pills-Size" type="button" role="tab" aria-controls="pills-Size" aria-selected="false">Size</button>
             </li>
+
         </ul>
     </div>
 </div>
 
-<div class="tab-content" id="pills-tabContent-order">
+<div class="tab-content" id="pills-tabContent-order" >
     <div class="tab-pane fade show active" id="pills-Title" role="tabpanel" aria-labelledby="pills-Title-tab">
         <?php
         $sortby = "title";

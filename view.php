@@ -12,5 +12,7 @@ echo json_encode($data);
 $con = null;
 exit();
 
+?>
+
 
 

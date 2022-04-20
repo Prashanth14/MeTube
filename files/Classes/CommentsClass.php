@@ -19,7 +19,10 @@ class CommentsClass{
                     $comment=$row['comment'];
                     $postedBy=$row['postedBy'];
                     $comentedDate =$row['commentedDate'];
-                    $html.="<div style='margin-right:425px;' class='container1'><span class='text-success'>$postedBy</span><p>$comment</p>  <span class='time-right'>$comentedDate</span></div>";
+                    $html.="<div style='margin-right:425px;' class='container1'>
+                    <span class='text-success'>$postedBy</span>
+                    <p>$comment</p>  
+                    <span>$comentedDate</span></div>";
                 }
               return $html;
             }

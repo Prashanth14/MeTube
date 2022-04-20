@@ -252,11 +252,11 @@ padding: 20px 0 8px 0;
   
   /*comments*/
   .container1 {
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 0px;
+    padding: 5px;
+    margin: 5px 0;
   }
   
   .container::after {
@@ -266,6 +266,9 @@ padding: 20px 0 8px 0;
   }
 
   .time-right {
-    color: #aaa;
-  }
 
+
+    color: black;
+    align-items:flex-end;
+    align-content: flex-end;
+  }

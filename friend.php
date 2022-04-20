@@ -4,9 +4,7 @@ require_once("files/Classes/friendsClass.php");
 require_once("files/Classes/StatusMessage.php");
 ?>
 
-<div class='container' style='padding-top:10px;'>
-<div class='jumbotron'>
-    <h3 class="text-dark display-3 text-center">Contacts</h3>
+    <p class="text-dark display-4 text-start" style='background-color:white'>Contacts</p>
 
     <?php
     
@@ -37,5 +35,4 @@ require_once("files/Classes/StatusMessage.php");
         }
    	?>
 
-</div>
 </div>

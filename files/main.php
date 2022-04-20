@@ -69,13 +69,14 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
       </li>
    
       <li class='nav-item'>
-      <a class='nav-link' href='logout.php'>Log Out </a>
+      <a class='nav-link' href='logout.php'>Sign Out </a>
       </li>
       </ul>";
         } else {
             echo "<ul class='navbar-nav'>
         <li class='nav-item'>
-          <a class='navlink' href='signup.php'>Sign up </i> </a>
+
+          <a class='nav-link' href='signup.php'>Sign up </i> </a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href='login.php'>Log In </i></a>

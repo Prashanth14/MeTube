@@ -14,7 +14,7 @@ if(isset($_POST["loginButton"])){
         header("location:channels.php");
     }
     else{
-        echo "failure";
+        $_SESSION['msg'] = "failure";
     }
 }
 ?>
@@ -32,20 +32,25 @@ if(isset($_POST["loginButton"])){
     <body>    
         <div class="container">
             <div class="title">Login to MeTube</div>
-            <h4>or <a href="signup.php">sign up!</a></h4>  
+            
             <div class="content">
                 <form action="login.php" method="POST">
                     <div class="user-details">
                         <div class="input-box">
+                            <img src="files/Images/user.png"/> 
                             <input type="text" name="username" placeholder="Enter username" required>
                         </div>
                         <div class="input-box">
+                            <img src="files/Images/password.png"/> 
                             <input type="password" name="password" placeholder="Enter password" required>
                             <?php echo $userAccount->displayError(StatusMessage::$loginFailed); ?>
                         </div>
         
                     <div class="button">
                         <button type="submit" name="loginButton">Login</button>
+                        <div style="padding-top: 10px;">
+                            <h5>Don't have an account ?<a href="signup.php">sign up!</a></h5> 
+                        </div>
                     </div>
                 </form>
             </div>

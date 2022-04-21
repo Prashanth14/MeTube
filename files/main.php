@@ -88,7 +88,7 @@ $loggedInUser = new UserDetails($con, $loggedInUserName);
 </nav>
 
 
-<div id="side-nav" style="background-color:#FEF9E7 ; width: 250px;">
+<div id="side-nav" style="background-color:#FEF9E7 ; width: 240px;">
     <div class="sidebar-menu">
         <ul style="list-style-type:none;">
             <li class='nav-item'>

@@ -10,10 +10,10 @@ if($query->rowCount()== 0){
 }
 else{
     $html .= "
-    <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover' style='background-color:rgb(255, 165, 0)'>
+    <div><div class='table-responsive'><table class='table table-bordered table-striped table-hover' style='background-color:#F2F4F4'>
             <thead class='thead-dark'>
             <tr>
-            <th style='background-color:MediumSeaGreen'>Playlist Name</th>
+            <th style='background-color:#AEB6BF  '>Playlist Name</th>
             </tr>
         
             </thead>
@@ -39,7 +39,7 @@ else{
 
 }
 $html.="
-    <div style='border: 5px solid green; padding:10px; background-color:Tomato'>
+    <div style='border: 5px solid green; padding:10px; background-color:#F2F4F4'>
     <p1>Create a new Playlist</p1>
     <form action='playlist.php' method='POST'>
 	        <input type='text' name ='playlistNamein' placeholder='Enter Playlist name...' required><br><br>
